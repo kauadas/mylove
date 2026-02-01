@@ -1,0 +1,79 @@
+:root {
+    --red: #9c1d1d;
+    --paper: #f6f1ea;
+    --ink: #2b2522;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Crimson Text', serif;
+    overflow-x: hidden;
+  }
+
+  .section {
+    min-height: 100vh;
+    padding: 18vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    max-width: 620px;
+  }
+
+  .center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight {
+    color: var(--red);
+  }
+
+  /* REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 1.2s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* FLORES */
+  .flowers {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flower {
+    position: absolute;
+    bottom: -40px;
+    font-size: 2rem;
+    opacity: 0.8;
+    animation: rise linear forwards;
+  }
+
+  @keyframes rise {
+    from {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(-120vh);
+      opacity: 1;
+    }
+  }
+
+  /* FINAL */
+  .ending {
+    background: #1a1a1a;
+    color: #f2f2f2;
+  }
